@@ -1,12 +1,12 @@
 Bacteria [] colony;
 void setup()   
  {     
- 	size(600, 600);
- 	colony=new Bacteria[3000];
+ 	size(800, 500);
+ 	colony=new Bacteria[50];
  	for(int i=0;i<colony.length;i++) {
- 		colony[i]= new Bacteria((int)(Math.random()*600),((int)(Math.random()*600)));
+ 		colony[i]= new Bacteria((int)(Math.random()*1280),((int)(Math.random()*720)));
  	}
- 	frameRate(20);
+ 	frameRate(30);
  }   
  void draw()   
  {    
