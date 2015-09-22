@@ -15,15 +15,19 @@ void setup()
  		colony[i].move();
  		colony[i].show();
  	}
- }  
+
+}
 
 class Bacteria    
  {     
  	
- 	int bX,bY,bC;
+ 	int bX,bY;
+ 	boolean alive;
  	Bacteria(int x,int y){
  		bX=x;
  		bY=y;
+ 		alive=true;
+ 		
  	}
  	void move(){
  	int direction = (int)(Math.random()*4);
@@ -45,7 +49,12 @@ class Bacteria
 		}
  	}
  	void show(){
-
- 		ellipse(bX, bY, 10, 10);
+ 		if (get(bX,bY)==color(255,0,0)) {
+ 			alive=false;
+ 		}
+ 		if (alive==true) {
+ 		ellipse(bX, bY, 10, 10);	
+ 		}
  	}
  }
+
