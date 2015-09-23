@@ -35,19 +35,19 @@ class Bacteria
  	int direction = (int)(Math.random()*4);
 
   		if(direction == 0){
-    		bX = bX + 5; //right
+    		bX = bX + 8; //right
  		}
 		else if(direction == 1)
 		{
-			bX = bX - 5; //left
+			bX = bX - 8; //left
 		}
 		else if(direction == 2)
 		{
-			bY = bY + 5; //down
+			bY = bY + 8; //down
 		}
 		else // direction must be 3
 		{
-			bY = bY - 5; //up
+			bY = bY - 8; //up
 		}
  	}
  	void show(){
