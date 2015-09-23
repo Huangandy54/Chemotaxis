@@ -4,7 +4,7 @@ void setup()
  	size(800, 500);
  	colony=new Bacteria[50];
  	for(int i=0;i<colony.length;i++) {
- 		colony[i]= new Bacteria((int)(Math.random()*1280),((int)(Math.random()*720)));
+ 		colony[i]= new Bacteria((int)(Math.random()*800),((int)(Math.random()*500)));
  	}
  	frameRate(30);
  }   
@@ -21,13 +21,15 @@ void setup()
 class Bacteria    
  {     
  	
- 	int bX,bY;
+ 	int bX,bY,r,g,b;
  	boolean alive;
  	Bacteria(int x,int y){
  		bX=x;
  		bY=y;
  		alive=true;
- 		
+ 		r=(int)(Math.random()*255);
+ 		g=(int)(Math.random()*255);
+ 		b=(int)(Math.random()*255);
  	}
  	void move(){
  	int direction = (int)(Math.random()*4);
@@ -53,6 +55,7 @@ class Bacteria
  			alive=false;
  		}
  		if (alive==true) {
+ 		fill(r, g, b);
  		ellipse(bX, bY, 10, 10);	
  		}
  	}
